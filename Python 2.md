@@ -1,235 +1,259 @@
----
+```python
+print 'shanioob' + 5/2	#will produce an error
+#TypeError: unsupported operand type(s) for /: 'str' and 'int'
+print 'shanioob' * 5/2	#will produce an error
+print 'shanioob' * (5/2)	#will produce 'shanioobshanioob'
+print          5/2.0
+```
+## Strings
+```python
+the_king = "the king"
+assert the_king[0] == 't'
+assert the_king[0] + the_king[1] == "th"
+assert the_king[0:2] == "th"
+assert the_king[1:] == "he king"
+assert the_king[:2] == "th"
+assert the_king[:-1] == "the kin"
 
+the_king.find('king')
+the_king.find('king',3)
+the_king.replace('king', 'queen', 1)
+assert the_king.split() == ["the", "king"]
+```
 
----
+```python
+assert type(shanioob_the_king) == "<class ‘string’>"
+dir()
+dir('__builtins__')
+help('modules')
+```
 
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">print</span> <span class="token string">'shanioob'</span> <span class="token operator">+</span> <span class="token number">5</span><span class="token operator">/</span><span class="token number">2</span>	<span class="token comment">#will produce an error</span>
-<span class="token comment">#TypeError: unsupported operand type(s) for /: 'str' and 'int'</span>
-<span class="token keyword">print</span> <span class="token string">'shanioob'</span> <span class="token operator">*</span> <span class="token number">5</span><span class="token operator">/</span><span class="token number">2</span>	<span class="token comment">#will produce an error</span>
-<span class="token keyword">print</span> <span class="token string">'shanioob'</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">5</span><span class="token operator">/</span><span class="token number">2</span><span class="token punctuation">)</span>	<span class="token comment">#will produce 'shanioobshanioob'</span>
-<span class="token keyword">print</span>          <span class="token number">5</span><span class="token operator">/</span><span class="token number">2.0</span>
-</code></pre>
-<h2 id="strings">Strings</h2>
-<pre class=" language-python"><code class="prism  language-python">the_king <span class="token operator">=</span> <span class="token string">"the king"</span>
-<span class="token keyword">assert</span> the_king<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'t'</span>
-<span class="token keyword">assert</span> the_king<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> the_king<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">"th"</span>
-<span class="token keyword">assert</span> the_king<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">"th"</span>
-<span class="token keyword">assert</span> the_king<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">"he king"</span>
-<span class="token keyword">assert</span> the_king<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">"th"</span>
-<span class="token keyword">assert</span> the_king<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">"the kin"</span>
-
-the_king<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">'king'</span><span class="token punctuation">)</span>
-the_king<span class="token punctuation">.</span>find<span class="token punctuation">(</span><span class="token string">'king'</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>
-the_king<span class="token punctuation">.</span>replace<span class="token punctuation">(</span><span class="token string">'king'</span><span class="token punctuation">,</span> <span class="token string">'queen'</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
-<span class="token keyword">assert</span> the_king<span class="token punctuation">.</span>split<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token punctuation">[</span><span class="token string">"the"</span><span class="token punctuation">,</span> <span class="token string">"king"</span><span class="token punctuation">]</span>
-</code></pre>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">assert</span> <span class="token builtin">type</span><span class="token punctuation">(</span>shanioob_the_king<span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">"&lt;class ‘string’&gt;"</span>
-<span class="token builtin">dir</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token builtin">dir</span><span class="token punctuation">(</span><span class="token string">'__builtins__'</span><span class="token punctuation">)</span>
-<span class="token builtin">help</span><span class="token punctuation">(</span><span class="token string">'modules'</span><span class="token punctuation">)</span>
-</code></pre>
-<h2 id="string-templates">String Templates</h2>
-<pre class=" language-python"><code class="prism  language-python"><span class="token string">"{}- I am the number {} programmer"</span><span class="token punctuation">.</span><span class="token builtin">format</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
-</code></pre>
-<h2 id="coercion">Coercion</h2>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">assert</span> <span class="token builtin">bool</span><span class="token punctuation">(</span><span class="token number">28</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token boolean">True</span>
-<span class="token keyword">assert</span> <span class="token builtin">str</span><span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token string">'True'</span>
-<span class="token keyword">assert</span> <span class="token builtin">int</span><span class="token punctuation">(</span><span class="token boolean">False</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">0</span>
-</code></pre>
-<h2 id="functions">functions</h2>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">say_hello</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">return</span> <span class="token string">'Hello '</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">'!'</span> 
+## String Templates
+```python
+"{}- I am the number {} programmer".format(1,1)
+```
+## Coercion
+```python
+assert bool(28) == True
+assert str(True) == 'True'
+assert int(False) == 0
+```
+## functions
+```python
+def say_hello(name):
+	return 'Hello ' + str(name) + '!' 
 	
-<span class="token keyword">print</span> say_hello<span class="token punctuation">(</span><span class="token string">'Susan'</span><span class="token punctuation">)</span>
+print say_hello('Susan')
 
-five<span class="token punctuation">,</span> seven <span class="token operator">=</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">7</span>
-fiveSeven <span class="token operator">=</span> <span class="token punctuation">[</span>five<span class="token punctuation">,</span> seven<span class="token punctuation">]</span>
+five, seven = 5, 7
+fiveSeven = [five, seven]
 
-<span class="token keyword">def</span> <span class="token function">sum</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    a <span class="token operator">=</span> a <span class="token operator">+</span> b
-<span class="token builtin">sum</span><span class="token punctuation">(</span>five<span class="token punctuation">,</span> seven<span class="token punctuation">)</span>	<span class="token comment">#five still == 5</span>
+def sum(a, b):
+    a = a + b
+sum(five, seven)	#five still == 5
 
-<span class="token keyword">def</span> <span class="token function">summer</span><span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token builtin">list</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token builtin">list</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
-summer<span class="token punctuation">(</span>fiveSeven<span class="token punctuation">)</span>	<span class="token comment">#fiveSeven == [12, 7]</span>
-</code></pre>
-<h3 id="functions-default-arguments">Function’s Default Arguments</h3>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">cm</span><span class="token punctuation">(</span>feet <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> inches <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-	inches_to_cm <span class="token operator">=</span> inches <span class="token operator">*</span> <span class="token number">2.54</span>
-	feet_to_cm <span class="token operator">=</span> feet <span class="token operator">*</span> <span class="token number">12</span> <span class="token operator">*</span> <span class="token number">2.54</span>
-	<span class="token keyword">return</span> inches_to_cm <span class="token operator">+</span> feet_to_cm
+def summer(list):
+	list[0] = list[0] + list[1]
+summer(fiveSeven)	#fiveSeven == [12, 7]
+```
 
-cm<span class="token punctuation">(</span>inches <span class="token operator">=</span> <span class="token number">70</span><span class="token punctuation">)</span>
-</code></pre>
-<h2 id="if-statement--ternary-operator">if Statement &amp; Ternary Operator</h2>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">def</span> <span class="token function">bigger</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token keyword">if</span> a <span class="token operator">&gt;</span> b<span class="token punctuation">:</span>
-		<span class="token keyword">return</span> a
-	<span class="token keyword">elif</span> b <span class="token operator">&gt;</span> a<span class="token punctuation">:</span>
-		<span class="token keyword">return</span> b
-	<span class="token keyword">else</span><span class="token punctuation">:</span>
-		<span class="token keyword">return</span> a
+### Function's Default Arguments
+```python
+def cm(feet = 0, inches = 0):
+	inches_to_cm = inches * 2.54
+	feet_to_cm = feet * 12 * 2.54
+	return inches_to_cm + feet_to_cm
 
-<span class="token keyword">def</span> <span class="token function">bigger</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span> b<span class="token punctuation">)</span><span class="token punctuation">:</span>
-    <span class="token keyword">return</span> a <span class="token keyword">if</span> a <span class="token operator">&gt;</span> b <span class="token keyword">else</span> b
-</code></pre>
-<h2 id="logic-operators">Logic Operators</h2>
-<pre class=" language-python"><code class="prism  language-python"><span class="token boolean">True</span> <span class="token operator">or</span> <span class="token boolean">False</span>
-<span class="token boolean">True</span> <span class="token operator">and</span> <span class="token boolean">False</span>
-<span class="token operator">not</span> <span class="token boolean">True</span> <span class="token operator">and</span> <span class="token operator">not</span> <span class="token boolean">False</span>
-<span class="token operator">not</span> <span class="token boolean">True</span> <span class="token operator">!=</span> <span class="token boolean">None</span>
-</code></pre>
-<h2 id="while-loops">While Loops</h2>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
-	<span class="token builtin">sum</span> <span class="token operator">+=</span> <span class="token number">1</span>	<span class="token comment">#the ++ syntax is not supported</span>
-</code></pre>
-<h2 id="for-loops">For Loops</h2>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">for</span> num <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token comment">#do that 10 times</span>
-</code></pre>
-<h2 id="lists">Lists</h2>
-<pre class=" language-python"><code class="prism  language-python"><span class="token builtin">list</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
-<span class="token keyword">assert</span> <span class="token builtin">list</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token number">2</span>
-<span class="token keyword">assert</span> <span class="token builtin">list</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">]</span>
-<span class="token keyword">assert</span> <span class="token builtin">list</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">+</span> <span class="token builtin">list</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">5</span><span class="token punctuation">]</span>
+cm(inches = 70)
+```
 
-<span class="token builtin">list</span> <span class="token operator">=</span> <span class="token builtin">list</span> <span class="token operator">+</span> <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span>	<span class="token comment">#will create a new array</span>
-<span class="token builtin">list</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span>			<span class="token comment">#will mutate the actual array</span>
-<span class="token builtin">list</span> <span class="token operator">+=</span> <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span>			<span class="token comment">#will mutate the actual array</span>
+## if Statement & Ternary Operator
+```python
+def bigger(a, b):
+	if a > b:
+		return a
+	elif b > a:
+		return b
+	else:
+		return a
 
-<span class="token keyword">assert</span> <span class="token builtin">list</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token punctuation">[</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token punctuation">]</span>
+def bigger(a, b):
+    return a if a > b else b
+```
+## Logic Operators
+```python
+True or False
+True and False
+not True and not False
+not True != None
+```
+## While Loops
+```python
+while True:
+	sum += 1	#the ++ syntax is not supported
+```
 
-<span class="token keyword">assert</span> <span class="token builtin">len</span><span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">4</span>
-<span class="token keyword">assert</span> <span class="token builtin">len</span><span class="token punctuation">(</span><span class="token string">"My list"</span><span class="token punctuation">)</span> <span class="token operator">==</span> <span class="token number">7</span>
+## For Loops
+```python
+for num in range(10):
+	#do that 10 times
+```
 
-<span class="token builtin">list</span><span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token number">6</span><span class="token punctuation">)</span>	<span class="token comment">#return index or error</span>
-<span class="token number">6</span> <span class="token keyword">in</span> <span class="token builtin">list</span> 	<span class="token comment">#return True or False</span>
-<span class="token operator">not</span> <span class="token number">6</span> <span class="token keyword">in</span> <span class="token builtin">list</span> <span class="token operator">==</span> <span class="token number">6</span> <span class="token operator">not</span> <span class="token keyword">in</span> <span class="token builtin">list</span>
+## Lists
+```python
+list = [1,2,3,[4,5]]
+assert list[1] == 2
+assert list[:2] == [1,2]
+assert list[:3] + list[3] == [1,2,3,4,5]
 
-<span class="token string">" "</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">)</span>
-</code></pre>
-<h2 id="tuples">Tuples</h2>
-<pre class=" language-python"><code class="prism  language-python"><span class="token builtin">tuple</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">3</span><span class="token punctuation">)</span>
-<span class="token punctuation">(</span>one<span class="token punctuation">,</span> two<span class="token punctuation">,</span> three<span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token builtin">tuple</span>
+list = list + [6, 7]	#will create a new array
+list.append(6)			#will mutate the actual array
+list += [6, 7]			#will mutate the actual array
 
-one<span class="token punctuation">,</span> two<span class="token punctuation">,</span> three <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span>	<span class="token comment">#valid syntax</span>
-</code></pre>
-<h2 id="assertion--error-handling">Assertion &amp; Error Handling</h2>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">try</span><span class="token punctuation">:</span>
-	<span class="token keyword">assert</span> isDefined<span class="token punctuation">(</span>arg1<span class="token punctuation">)</span>
-<span class="token keyword">except</span> AssertionError<span class="token punctuation">:</span>
-	<span class="token keyword">print</span> <span class="token string">"AssertionError raised"</span>
-</code></pre>
-<h2 id="user-input">User Input</h2>
-<pre class=" language-python"><code class="prism  language-python">user_input <span class="token operator">=</span> <span class="token builtin">raw_input</span><span class="token punctuation">(</span><span class="token string">"Type your input: "</span><span class="token punctuation">)</span>
-</code></pre>
-<h2 id="used-import-statement">Used Import Statement</h2>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">from</span> random <span class="token keyword">import</span> randint
-random <span class="token operator">=</span> randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+assert list[:2] * 2 == [ 1, 2, 1, 2 ]
 
-<span class="token keyword">import</span> random
-random <span class="token operator">=</span> random<span class="token punctuation">.</span>randint<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">)</span>
+assert len(list) == 4
+assert len("My list") == 7
 
-<span class="token keyword">import</span> webbrowser
-webbrowser<span class="token punctuation">.</span><span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"https://www.google.com"</span><span class="token punctuation">)</span>
+list.index(6)	#return index or error
+6 in list 	#return True or False
+not 6 in list == 6 not in list
 
-<span class="token keyword">import</span> time
-time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">60</span><span class="token punctuation">)</span>		<span class="token comment">#time is seconds</span>
-this_time <span class="token operator">=</span> time<span class="token punctuation">.</span>ctime<span class="token punctuation">(</span><span class="token punctuation">)</span>
+" ".join(list)
+```
+## Tuples
+```python
+tuple = (1,2,3)
+(one, two, three) = tuple
 
-<span class="token keyword">import</span> os
-os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>r<span class="token string">"c:\OOP\prank"</span><span class="token punctuation">)</span>
-os<span class="token punctuation">.</span>rename<span class="token punctuation">(</span>src<span class="token punctuation">,</span> dst<span class="token punctuation">)</span>
-os<span class="token punctuation">.</span>getcwd<span class="token punctuation">(</span><span class="token punctuation">)</span>
-os<span class="token punctuation">.</span>chdir<span class="token punctuation">(</span>path<span class="token punctuation">)</span>
+one, two, three = 1, 2, 3	#valid syntax
+```
 
-string<span class="token punctuation">.</span>translate<span class="token punctuation">(</span>s<span class="token punctuation">,</span> table<span class="token punctuation">[</span><span class="token punctuation">,</span> deletechars<span class="token punctuation">]</span><span class="token punctuation">)</span>
-string<span class="token punctuation">.</span>translate<span class="token punctuation">(</span><span class="token boolean">None</span><span class="token punctuation">,</span> <span class="token string">"0123456789"</span><span class="token punctuation">)</span>
-</code></pre>
-<h3 id="turtle-class">turtle class</h3>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">import</span> turtle
+## Assertion & Error Handling
+```python
+try:
+	assert isDefined(arg1)
+except AssertionError:
+	print "AssertionError raised"
+```
 
-window <span class="token operator">=</span> turtle<span class="token punctuation">.</span>Screen<span class="token punctuation">(</span><span class="token punctuation">)</span>
-window<span class="token punctuation">.</span>bgcolor<span class="token punctuation">(</span><span class="token string">"red"</span> <span class="token operator">or</span> <span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span><span class="token punctuation">,</span><span class="token number">255</span> <span class="token operator">or</span> <span class="token string">"#rrggbb"</span><span class="token punctuation">)</span>
+## User Input
+```python
+user_input = raw_input("Type your input: ")
+```
+## Used Import Statement
+```python
+from random import randint
+random = randint(0,1)
 
-my_turtle <span class="token operator">=</span> turtle<span class="token punctuation">.</span>Turtle<span class="token punctuation">(</span><span class="token punctuation">)</span> 
-	<span class="token operator">or</span> turtle<span class="token punctuation">.</span>Pen<span class="token punctuation">(</span><span class="token punctuation">)</span>
+import random
+random = random.randint(0,1)
 
-my_turtle<span class="token punctuation">.</span>forward<span class="token punctuation">(</span>distance<span class="token punctuation">)</span> 
-	<span class="token operator">or</span> fd<span class="token punctuation">(</span>distance<span class="token punctuation">)</span>
-my_turtle<span class="token punctuation">.</span>backward<span class="token punctuation">(</span>distance<span class="token punctuation">)</span> 
-	<span class="token operator">or</span> bk<span class="token punctuation">(</span>distance<span class="token punctuation">)</span> 
-	<span class="token operator">or</span> back<span class="token punctuation">(</span>distance<span class="token punctuation">)</span>
-my_turtle<span class="token punctuation">.</span>right<span class="token punctuation">(</span>degrees<span class="token punctuation">)</span> 
-	<span class="token operator">or</span> rt<span class="token punctuation">(</span>degrees<span class="token punctuation">)</span>
-my_turtle<span class="token punctuation">.</span>left<span class="token punctuation">(</span>degrees<span class="token punctuation">)</span> 
-	<span class="token operator">or</span> lt<span class="token punctuation">(</span>degrees<span class="token punctuation">)</span>
-my_turtle<span class="token punctuation">.</span>circle<span class="token punctuation">(</span>radius<span class="token punctuation">,</span> extent<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> steps<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span>
+import webbrowser
+webbrowser.open("https://www.google.com")
 
-my_turtle<span class="token punctuation">.</span>speed<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token number">10</span><span class="token punctuation">)</span>	<span class="token comment">#0 is fastest (no animation), then speed drops from 10 to 1</span>
-my_turtle<span class="token punctuation">.</span>shape<span class="token punctuation">(</span><span class="token string">"arrow"</span> <span class="token operator">or</span> <span class="token string">"turtle"</span> <span class="token operator">or</span> <span class="token string">"circle"</span> <span class="token operator">or</span> <span class="token string">"square"</span> <span class="token operator">or</span> <span class="token string">"triangle"</span> <span class="token operator">or</span> <span class="token string">"classic"</span> <span class="token operator">or</span> <span class="token string">"blank"</span><span class="token punctuation">)</span>
-my_turtle<span class="token punctuation">.</span>shapesize<span class="token punctuation">(</span>stretch_wid<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> stretch_len<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> outline<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span> 
-	<span class="token operator">or</span> my_turtle<span class="token punctuation">.</span>turtlesize<span class="token punctuation">(</span><span class="token punctuation">)</span>
-my_turtle<span class="token punctuation">.</span>pensize<span class="token punctuation">(</span>lines<span class="token punctuation">)</span> 
-	<span class="token operator">or</span> width<span class="token punctuation">(</span>lines<span class="token punctuation">)</span>
+import time
+time.sleep(60)		#time is seconds
+this_time = time.ctime()
 
-my_turtle<span class="token punctuation">.</span>color<span class="token punctuation">(</span>color<span class="token punctuation">)</span>
-my_turtle<span class="token punctuation">.</span>pencolor<span class="token punctuation">(</span>color<span class="token punctuation">)</span>
-my_turtle<span class="token punctuation">.</span>fillcolor<span class="token punctuation">(</span>color<span class="token punctuation">)</span>
+import os
+os.listdir(r"c:\OOP\prank")
+os.rename(src, dst)
+os.getcwd()
+os.chdir(path)
 
-<span class="token comment">#turn off tracer</span>
-my_turtle<span class="token punctuation">.</span>tracer<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
-<span class="token comment">#because tracer is off</span>
-my_turtle<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">)</span>
+string.translate(s, table[, deletechars])
+string.translate(None, "0123456789")
+```
 
-<span class="token comment">#only exit onclick</span>
-window<span class="token punctuation">.</span>exitonclick<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<h2 id="file-manipulation---built-in-functions">File Manipulation - Built-in Functions</h2>
-<pre class=" language-python"><code class="prism  language-python">myFile <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span>	<span class="token comment">#open() returns a file object</span>
-content <span class="token operator">=</span> myFile<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
-myFile<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+### turtle class
+```python
+import turtle
 
-<span class="token keyword">import</span> urllib
-connection <span class="token operator">=</span> urllib<span class="token punctuation">.</span>urlopen<span class="token punctuation">(</span><span class="token string">"http://www.wdyl.com/profanity?q="</span><span class="token operator">+</span>text<span class="token punctuation">)</span>
-output <span class="token operator">=</span> connection<span class="token punctuation">.</span>read<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>output<span class="token punctuation">)</span>
-connection<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
-</code></pre>
-<h2 id="class-definition">Class Definition</h2>
-<pre class=" language-python"><code class="prism  language-python"><span class="token keyword">class</span> <span class="token class-name">Parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-	<span class="token triple-quoted-string string">"""This String will be accessable using the __doc__ variable"""</span>
-   money <span class="token operator">=</span> <span class="token string">"under zero"</span>
-   state <span class="token operator">=</span> <span class="token string">"exausted"</span>
+window = turtle.Screen()
+window.bgcolor("red" or 255,255,255 or "#rrggbb")
+
+my_turtle = turtle.Turtle() 
+	or turtle.Pen()
+
+my_turtle.forward(distance) 
+	or fd(distance)
+my_turtle.backward(distance) 
+	or bk(distance) 
+	or back(distance)
+my_turtle.right(degrees) 
+	or rt(degrees)
+my_turtle.left(degrees) 
+	or lt(degrees)
+my_turtle.circle(radius, extent=None, steps=None)
+
+my_turtle.speed(0..10)	#0 is fastest (no animation), then speed drops from 10 to 1
+my_turtle.shape("arrow" or "turtle" or "circle" or "square" or "triangle" or "classic" or "blank")
+my_turtle.shapesize(stretch_wid=None, stretch_len=None, outline=None) 
+	or my_turtle.turtlesize()
+my_turtle.pensize(lines) 
+	or width(lines)
+
+my_turtle.color(color)
+my_turtle.pencolor(color)
+my_turtle.fillcolor(color)
+
+#turn off tracer
+my_turtle.tracer(0, 0)
+#because tracer is off
+my_turtle.update()
+
+#only exit onclick
+window.exitonclick()
+```
+
+## File Manipulation - Built-in Functions
+```python
+myFile = open("path")	#open() returns a file object
+content = myFile.read()
+myFile.close()
+
+import urllib
+connection = urllib.urlopen("http://www.wdyl.com/profanity?q="+text)
+output = connection.read()
+print(output)
+connection.close()
+```
+
+## Class Definition
+```python
+class Parent():
+	"""This String will be accessable using the __doc__ variable"""
+   money = "under zero"
+   state = "exausted"
    
-   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> last_name<span class="token punctuation">,</span> eye_color<span class="token punctuation">)</span><span class="token punctuation">:</span>
-      self<span class="token punctuation">.</span>last_name <span class="token operator">=</span> last_name
-      self<span class="token punctuation">.</span>eye_color <span class="token operator">=</span> eye_color
+   def __init__(self, last_name, eye_color):
+      self.last_name = last_name
+      self.eye_color = eye_color
 
-   <span class="token keyword">def</span> <span class="token function">show_info</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-      <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Last Name - "</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>last_name<span class="token punctuation">)</span>
-      <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Eye Color - "</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>eye_color<span class="token punctuation">)</span>
+   def show_info(self):
+      print("Last Name - " + self.last_name)
+      print("Eye Color - " + self.eye_color)
 
 
-<span class="token keyword">class</span> <span class="token class-name">Child</span><span class="token punctuation">(</span>Parent<span class="token punctuation">)</span><span class="token punctuation">:</span>
-   state <span class="token operator">=</span> <span class="token string">"lively"</span>
+class Child(Parent):
+   state = "lively"
    
-   <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> last_name<span class="token punctuation">,</span> eye_color<span class="token punctuation">,</span> number_of_toys<span class="token punctuation">)</span><span class="token punctuation">:</span>
-      Parent<span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>self<span class="token punctuation">,</span> last_name<span class="token punctuation">,</span> eye_color<span class="token punctuation">)</span>
-      self<span class="token punctuation">.</span>number_of_toys <span class="token operator">=</span> number_of_toys
+   def __init__(self, last_name, eye_color, number_of_toys):
+      Parent.__init__(self, last_name, eye_color)
+      self.number_of_toys = number_of_toys
 
-   <span class="token keyword">def</span> <span class="token function">show_info</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
-      Parent<span class="token punctuation">.</span>show_info<span class="token punctuation">(</span>self<span class="token punctuation">)</span>
-      <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"Number of Toys - "</span> <span class="token operator">+</span> <span class="token builtin">str</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>number_of_toys<span class="token punctuation">)</span><span class="token punctuation">)</span>
-      <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"State - "</span> <span class="token operator">+</span> self<span class="token punctuation">.</span>state<span class="token punctuation">)</span>
+   def show_info(self):
+      Parent.show_info(self)
+      print("Number of Toys - " + str(self.number_of_toys))
+      print("State - " + self.state)
 
-gabgoob <span class="token operator">=</span> Child<span class="token punctuation">(</span><span class="token string">"Ben Shanioob"</span><span class="token punctuation">,</span> <span class="token string">"Honey"</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span> gabgoob<span class="token punctuation">.</span>money
-gabgoob<span class="token punctuation">.</span>show_info<span class="token punctuation">(</span><span class="token punctuation">)</span>
+gabgoob = Child("Ben Shanioob", "Honey", 3)
+print gabgoob.money
+gabgoob.show_info()
 
-Parent<span class="token punctuation">.</span>__doc__		<span class="token comment">#The class documentation string.</span>
-Parent<span class="token punctuation">.</span>__module__	<span class="token comment">#The name of the module in which this class was defined.</span>
-Parent<span class="token punctuation">.</span>__name__		<span class="token comment">#The name of the class.</span>
-Child<span class="token punctuation">.</span>__bases__	<span class="token comment">#The classes from which this class inherits.</span>
-</code></pre>
-
+Parent.__doc__		#The class documentation string.
+Parent.__module__	#The name of the module in which this class was defined.
+Parent.__name__		#The name of the class.
+Child.__bases__	#The classes from which this class inherits.
+```
